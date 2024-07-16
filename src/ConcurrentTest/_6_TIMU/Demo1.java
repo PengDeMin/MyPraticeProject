@@ -19,23 +19,25 @@ public class Demo1 {
 
         new Thread(new Runnable() {
             int xiaoMingCount = 0;
+
             @Override
             public void run() {
                 while (distributeGfit()) {
                     xiaoMingCount++;
                 }
-                System.out.println(Thread.currentThread().getName()+"发了"+xiaoMingCount+"份礼物");
+                System.out.println(Thread.currentThread().getName() + "发了" + xiaoMingCount + "份礼物");
             }
         }, "小明").start();
 
         new Thread(new Runnable() {
             int xiaoHongCount = 0;
+
             @Override
             public void run() {
                 while (distributeGfit()) {
                     xiaoHongCount++;
                 }
-                System.out.println(Thread.currentThread().getName()+"发了"+xiaoHongCount+"份礼物");
+                System.out.println(Thread.currentThread().getName() + "发了" + xiaoHongCount + "份礼物");
             }
         }, "小红").start();
 
@@ -46,9 +48,9 @@ public class Demo1 {
     //分发礼物每次发一份
     private static boolean distributeGfit() {
         if (giftAmount.get() > 10) {
-            int amount  = giftAmount.get();
+            int amount = giftAmount.get();
             giftAmount.decrementAndGet();
-            System.out.println(Thread.currentThread().getName() + "成功分发了一份礼物，还剩余" + (amount-1) + "份礼物");
+            System.out.println(Thread.currentThread().getName() + "成功分发了一份礼物，还剩余" + (amount - 1) + "份礼物");
             return true;
         }
         return false;

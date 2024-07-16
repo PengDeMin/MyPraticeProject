@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
 /**
  * @ClassName MultiThreadClient
  * @Description TODO
@@ -29,12 +30,12 @@ public class MultiThreadClient {
     private static Runnable createTask(final int taskID) {
         return new Runnable() {
             private Socket socket = null;
-            private int port=8821;
+            private int port = 8821;
 
             @Override
             public void run() {
                 System.out.println("任务" + taskID + ":启动");
-                try {                    
+                try {
                     socket = new Socket("localhost", port);//客户端建立socket
                     // 发送关闭命令
                     OutputStream socketOut = socket.getOutputStream();
@@ -42,13 +43,13 @@ public class MultiThreadClient {
 
                     // 接收服务器的反馈
                     BufferedReader br = new BufferedReader(
-                                                        new InputStreamReader(socket.getInputStream()));
+                            new InputStreamReader(socket.getInputStream()));
                     String msg = null;
                     while ((msg = br.readLine()) != null)//读取输入流内容
                     {
-                        System.out.println(msg+"你好");
+                        System.out.println(msg + "你好");
                     }
-                } catch (IOException e) {                    
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }

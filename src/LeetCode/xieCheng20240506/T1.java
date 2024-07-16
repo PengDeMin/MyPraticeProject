@@ -18,21 +18,20 @@ public class T1 {
         //输入n、m
         String nums = scanner.nextLine();
         int[] s = Arrays.stream(nums.split(" ")).mapToInt(Integer::parseInt).toArray();
-        int n = s[0],m=s[1];
+        int n = s[0], m = s[1];
         //输入c1、c2
         String strs = scanner.nextLine();
         //String[] s1 = strs.split(" ");
-        char c1 = strs.charAt(0), c2=strs.charAt(2);
+        char c1 = strs.charAt(0), c2 = strs.charAt(2);
 
         //遍历n行
-        for (int row = 0; row<n; row++){
+        for (int row = 0; row < n; row++) {
             char[] c = new char[m];
             //组装第row行
-            for(int col = 0; col<m; col++){
-                if((row % 2==0 && col%2 ==0)||(row % 2!=0 && col%2 !=0)){
+            for (int col = 0; col < m; col++) {
+                if ((row % 2 == 0 && col % 2 == 0) || (row % 2 != 0 && col % 2 != 0)) {
                     c[col] = c1;
-                }
-                else{
+                } else {
                     c[col] = c2;
                 }
 

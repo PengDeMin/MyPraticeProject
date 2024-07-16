@@ -14,7 +14,7 @@ public class typeTets {
     public static void main(String[] args) {
         int a = 10;//基本类型
         Integer aInt = Integer.valueOf(a);//装箱
-        aInt+=20;
+        aInt += 20;
         System.out.println(Integer.TYPE.getName());
         int b = aInt.intValue();//拆箱
 

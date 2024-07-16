@@ -12,13 +12,13 @@ import java.util.Scanner;
  */
 
 public class One_2_Lc35_easy {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         int target = sc.nextInt();
         int[] nums = Arrays.stream(input.split(",")).mapToInt(Integer::parseInt).toArray();
 
-        System.out.println(search(nums,target));
+        System.out.println(search(nums, target));
 
     }
 
@@ -26,13 +26,13 @@ public class One_2_Lc35_easy {
     private static int search(int[] nums, int target) {
         int left = 0;
         int right = nums.length;
-        while (left < right){
-            int mid = left + (right-left)>>1;
-            if(nums[mid] == target){
+        while (left < right) {
+            int mid = left + (right - left) >> 1;
+            if (nums[mid] == target) {
                 return mid;
-            }else if(nums[mid] > target){
+            } else if (nums[mid] > target) {
                 right = mid;
-            }else{
+            } else {
                 left = mid + 1;
             }
         }

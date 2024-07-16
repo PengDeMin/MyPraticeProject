@@ -16,6 +16,8 @@ import java.lang.annotation.Target;
 public @interface myAnnotation {
 
     String value();
+
     double aaa() default 100;
-    String [] bbb() ;
+
+    String[] bbb();
 }

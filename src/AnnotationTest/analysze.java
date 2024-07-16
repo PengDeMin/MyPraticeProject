@@ -18,9 +18,9 @@ public class analysze {
         //1、拿到类字节码
         Class ac = AnnotationTest1.class;
         //2、拿到成员方法
-        Method testMethod = ac.getDeclaredMethod("test123",String.class);
+        Method testMethod = ac.getDeclaredMethod("test123", String.class);
         //如果该方法上存在注解，则
-        if(testMethod.isAnnotationPresent(myAnnotation.class)){
+        if (testMethod.isAnnotationPresent(myAnnotation.class)) {
             //拿到这个注解，并打印上面的数据
             myAnnotation declaredAnnotation = testMethod.getDeclaredAnnotation(myAnnotation.class);
             System.out.println(declaredAnnotation.value());

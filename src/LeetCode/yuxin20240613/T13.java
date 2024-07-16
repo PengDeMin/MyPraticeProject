@@ -12,7 +12,7 @@ import java.util.*;
 public class T13 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int n =  in.nextInt();
+        int n = in.nextInt();
         int m = in.nextInt();
 
         Integer[] costPrice = new Integer[n];
@@ -20,25 +20,25 @@ public class T13 {
         Integer[] profitPrice = new Integer[n];
 
         //输入n个菜的信息
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             //记录菜品的本金和售卖价格
-          costPrice[i] = in.nextInt();
-          sellPrice[i] = in.nextInt();
-          profitPrice[i] = sellPrice[i] - costPrice[i];
+            costPrice[i] = in.nextInt();
+            sellPrice[i] = in.nextInt();
+            profitPrice[i] = sellPrice[i] - costPrice[i];
         }
 
         int sellTotal = 0;
         int maxProfit = 0;
 
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             int thisProfit = 0;
-            for(int j = i+1; j < n; j++) {
-                if((sellTotal + sellPrice[j])<= m){
+            for (int j = i + 1; j < n; j++) {
+                if ((sellTotal + sellPrice[j]) <= m) {
                     sellTotal += sellPrice[j];
                     thisProfit += (sellPrice[j] - costPrice[j]);
                 }
             }
-            if(thisProfit>maxProfit){
+            if (thisProfit > maxProfit) {
                 maxProfit = thisProfit;
             }
         }

@@ -12,8 +12,7 @@ import java.util.*;
 public class wangyiT3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n  = scanner.nextInt();//星系建筑数量
-
+        int n = scanner.nextInt();//星系建筑数量
 
 
         int[] xCoor = new int[n];
@@ -32,9 +31,9 @@ public class wangyiT3 {
             int xRequest = scanner.nextInt();
             int yReuqest = scanner.nextInt();
             int influenced = 0;
-            for(int j = 0; j < n; j++){
-                if(Math.max(Math.abs(xCoor[j]-xRequest),
-                        Math.abs(yCoor[j]-yReuqest)) <= radius[j]){
+            for (int j = 0; j < n; j++) {
+                if (Math.max(Math.abs(xCoor[j] - xRequest),
+                        Math.abs(yCoor[j] - yReuqest)) <= radius[j]) {
                     influenced++;
                 }
             }
@@ -42,7 +41,7 @@ public class wangyiT3 {
         }
 
         //3、输出结果
-        for (int i = 0; i < q; i++){
+        for (int i = 0; i < q; i++) {
             System.out.println(res[i]);
         }
     }

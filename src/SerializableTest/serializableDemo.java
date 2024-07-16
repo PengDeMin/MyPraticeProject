@@ -19,8 +19,8 @@ public class serializableDemo {
         //直接打印s1和打印s1.toString()是一个效果
         System.out.println(s1);
         //将s1对象序列化保存到文件中
-        try(FileOutputStream fos = new FileOutputStream("serial");
-            ObjectOutputStream oos = new ObjectOutputStream(fos);) {
+        try (FileOutputStream fos = new FileOutputStream("serial");
+             ObjectOutputStream oos = new ObjectOutputStream(fos);) {
             oos.writeObject(s1);
         } catch (IOException e) {
             e.printStackTrace();
@@ -28,9 +28,9 @@ public class serializableDemo {
 
         //从文件中读取s1对象并进行反序列化，然后输出值
         File file = new File("serial");
-        try(ObjectInputStream ois = new ObjectInputStream(
+        try (ObjectInputStream ois = new ObjectInputStream(
                 new FileInputStream(file))) {
-             Student s2 = (Student) ois.readObject();
+            Student s2 = (Student) ois.readObject();
             System.out.println(s2);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();

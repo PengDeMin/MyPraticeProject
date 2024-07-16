@@ -7,13 +7,13 @@ package ProxyExample;
  * @Date 2024/4/25 17:27
  */
 
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     @Override
     public void login(String username, String password) throws Exception {
         //long loginTime = System.currentTimeMillis();
-        if("admin".equals(username) && "123456".equals(password)){
+        if ("admin".equals(username) && "123456".equals(password)) {
             System.out.println("登录成功了捏");
-        }else{
+        } else {
             System.out.println("登录失败，用户名或者密码错误");
         }
         Thread.sleep(1000);
@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService{
 //        long loginTime = System.currentTimeMillis();
 
         System.out.println("已经查询出3个用户");
-        String[] names = {"王二狗","张全蛋","牛爱华"};
+        String[] names = {"王二狗", "张全蛋", "牛爱华"};
         Thread.sleep(1000);
 
 //        long endTime = System.currentTimeMillis();

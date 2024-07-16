@@ -14,7 +14,7 @@ public class Lc567 {
     public static void main(String[] args) {
         String s1 = "ab";
         String s2 = "eidbaooo";
-        System.out.println(checkInclusion(s1,s2));
+        System.out.println(checkInclusion(s1, s2));
     }
 
     //看s1的排列之一是否是s2的子串

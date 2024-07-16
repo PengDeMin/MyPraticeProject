@@ -13,23 +13,23 @@ import java.util.stream.Collectors;
 public class wangyiT32 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n  = scanner.nextInt();//星系建筑数量
+        int n = scanner.nextInt();//星系建筑数量
         List<Planet> worlds = new ArrayList<>();
 
         worlds.sort(new Comparator<Planet>() {
             @Override
             public int compare(Planet o1, Planet o2) {
-                return o1.radius- o2.radius;
+                return o1.radius - o2.radius;
             }
         });
 
         //1、输入星系每个坐标的值和影响力
         for (int i = 0; i < n; i++) {
-            worlds.add(new Planet(scanner.nextInt(),scanner.nextInt(),scanner.nextInt()));
+            worlds.add(new Planet(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
         }
-        List<Planet>sortWorlds = worlds.stream().sorted(Comparator.comparingInt(Planet::getRadius)
-                .thenComparing(Planet::getxCoor)
-                .thenComparing(Planet::getyCoor))
+        List<Planet> sortWorlds = worlds.stream().sorted(Comparator.comparingInt(Planet::getRadius)
+                        .thenComparing(Planet::getxCoor)
+                        .thenComparing(Planet::getyCoor))
                 .collect(Collectors.toList());
 
         int q = scanner.nextInt();//询问次数
@@ -43,7 +43,7 @@ public class wangyiT32 {
     }
 }
 
-class Planet{
+class Planet {
     public int getxCoor() {
         return xCoor;
     }

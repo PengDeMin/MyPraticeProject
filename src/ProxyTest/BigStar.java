@@ -7,7 +7,7 @@ package ProxyTest;
  * @Date 2024/4/25 16:49
  */
 
-public class BigStar implements Star{
+public class BigStar implements Star {
     private String name;
 
     public BigStar(String name) {
@@ -23,6 +23,6 @@ public class BigStar implements Star{
 
     @Override
     public void dance() {
-        System.out.println(name+"正在优美地跳舞");
+        System.out.println(name + "正在优美地跳舞");
     }
 }

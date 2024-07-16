@@ -11,9 +11,9 @@ public class Lc59 {
     public static void main(String[] args) {
         int[][] res = generateMatrix2(3);
 
-        for(int[] rs :res) {
-            for(int num: rs){
-                System.out.print(num+"  ");
+        for (int[] rs : res) {
+            for (int num : rs) {
+                System.out.print(num + "  ");
             }
             System.out.println();
         }
@@ -26,31 +26,31 @@ public class Lc59 {
         int startNum = 1;
         //n-=2是因为下一次循环的插入步长要减2
         //startIndex++是因为下一次循环的开始位置从res[startIndex][startIndex]变成res[startIndex+1][startIndex+1]
-        for(;n>0;n-=2,startIndex++){
+        for (; n > 0; n -= 2, startIndex++) {
             //一次右下左上的插入循环
-            startNum = insertLoop(res,startIndex,n,startNum);
+            startNum = insertLoop(res, startIndex, n, startNum);
         }
         return res;
     }
 
     //每一次的插入循环（右->下->左->上），每次循环都从res[startIndex][startIndex]的位置开始插入
-    public static int insertLoop(int [][]res, int startIndex, int n, int startNum){
+    public static int insertLoop(int[][] res, int startIndex, int n, int startNum) {
         //1、先向右走n步，插n次，因为n步中一个位置都没有插入过
         int index;
-        int row = startIndex,col = startIndex-1;
-        for(index = 0; index < n; index++){
+        int row = startIndex, col = startIndex - 1;
+        for (index = 0; index < n; index++) {
             res[row][++col] = startNum++;
         }
         //2、然后向下走n-1步，插n-1次，因为n步中最上边的一个位置之前已经插入过了
-        for(index = 1; index < n; index++){
+        for (index = 1; index < n; index++) {
             res[++row][col] = startNum++;
         }
         //3、然后向左走n-1步，插n-1次，因为n步中最右边的一个位置之前已经插入过了
-        for(index = 1; index < n; index++){
+        for (index = 1; index < n; index++) {
             res[row][--col] = startNum++;
         }
         //4、然后往上走n-2步，插n-2次，因为n步中最上边和最下边的两个位置之前已经插入过了
-        for(index = 2; index < n; index++) {
+        for (index = 2; index < n; index++) {
             res[--row][col] = startNum++;
         }
         return startNum;
@@ -61,9 +61,9 @@ public class Lc59 {
         int[][] res = new int[n][n];
         int insertNum = 1;
         //确定四个边角
-        int left = 0, right = n-1, top = 0, bottom = n-1;
+        int left = 0, right = n - 1, top = 0, bottom = n - 1;
         //判断每次循环开始前的边界是否符合要求，因为上一次循环结束后，边界会发生变化
-        while(left <= right && top <= bottom) {
+        while (left <= right && top <= bottom) {
             //一次（层）循环包括右下左上四个步骤，但不是每个步骤都一定执行到，要看边界情况
             //1、从左往右走
             for (int colIndex = left; colIndex <= right; colIndex++) {

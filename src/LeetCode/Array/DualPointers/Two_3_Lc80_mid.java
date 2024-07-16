@@ -18,9 +18,9 @@ public class Two_3_Lc80_mid {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         int[] nums = Arrays.stream(input.split(",")).mapToInt(Integer::parseInt).toArray();
-        System.out.println(removeDuplicates(nums,2));
+        System.out.println(removeDuplicates(nums, 2));
         for (int num : nums) {
-            System.out.print(num+",");
+            System.out.print(num + ",");
         }
     }
 
@@ -35,7 +35,7 @@ public class Two_3_Lc80_mid {
         for (int number : nums) {
             //slow < keepTimes表示数组前面的元素最多可重复keepTimes次
             //nums[slow-keepTimes] != number表示数组中间元素判断是否重复了keepTimes次
-            if(slow < keepTimes || nums[slow-keepTimes] != number){
+            if (slow < keepTimes || nums[slow - keepTimes] != number) {
                 nums[slow++] = number;
             }
         }

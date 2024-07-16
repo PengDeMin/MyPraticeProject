@@ -21,22 +21,22 @@ public class Two_1_Lc27_easy {
         String input = sc.nextLine();
         int[] nums = Arrays.stream(input.split(",")).mapToInt(Integer::parseInt).toArray();
         int val = sc.nextInt();
-        System.out.println(removeElement2(nums,val));
+        System.out.println(removeElement2(nums, val));
         for (int num : nums) {
-            System.out.print(num+",");
+            System.out.print(num + ",");
         }
     }
 
     //双指针，前后双向指针,以右边指针作为主角来控制
     private static int removeElement(int[] nums, int val) {
         int left = 0;
-        int right = nums.length-1;
+        int right = nums.length - 1;
         //这种方式本质是右指针作为主要角色去走，只有当左指针指向元素不为val时才往后走
         //同时左指针也起到了计数的作用
-        while(left<=right){
-            if(nums[left]==val){
+        while (left <= right) {
+            if (nums[left] == val) {
                 nums[left] = nums[right--];
-            }else {
+            } else {
                 left++;
             }
         }
@@ -46,9 +46,9 @@ public class Two_1_Lc27_easy {
     //双指针，快慢双指针，以走得快相对靠右边的指针来控制
     private static int removeElement2(int[] nums, int val) {
         int slow = 0;
-        for(int fast = 0; fast<nums.length; fast++){
-            if(nums[fast]!=val){
-                nums[slow++]=nums[fast];
+        for (int fast = 0; fast < nums.length; fast++) {
+            if (nums[fast] != val) {
+                nums[slow++] = nums[fast];
             }
         }
 

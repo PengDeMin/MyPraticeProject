@@ -24,40 +24,40 @@ public class HashMapTest {
         //1、Iterator的entrySet
         Iterator<Map.Entry<Integer, String>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()) {
-            Map.Entry<Integer,String> entry = iterator.next();
-            System.out.println(entry.getKey()+" "+entry.getValue());
+            Map.Entry<Integer, String> entry = iterator.next();
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
         //2、Iterator的keySet
         Iterator<Integer> iterator2 = map.keySet().iterator();
-        while(iterator2.hasNext()) {
+        while (iterator2.hasNext()) {
             Integer key = iterator2.next();
-            System.out.println(key+" "+map.get(key));
+            System.out.println(key + " " + map.get(key));
         }
 
         //3、ForEach 的entrySet
-        for (Map.Entry<Integer,String> entry: map.entrySet()){
-            System.out.println(entry.getKey()+" "+entry.getValue());
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
         //4、ForEach 的keySet
-        for(Integer key:map.keySet()){
-            System.out.println(key+" "+map.get(key));
+        for (Integer key : map.keySet()) {
+            System.out.println(key + " " + map.get(key));
         }
 
         //5、Lambda
-        map.forEach((key,value)->{
-            System.out.println(key+" "+value);
+        map.forEach((key, value) -> {
+            System.out.println(key + " " + value);
         });
 
         //6、Streams API 单线程
-        map.entrySet().stream().forEach((entry)->{
-            System.out.println(entry.getKey()+" "+ entry.getValue());
+        map.entrySet().stream().forEach((entry) -> {
+            System.out.println(entry.getKey() + " " + entry.getValue());
         });
 
         //7、Steams API 多线程 parallelStream
-        map.entrySet().parallelStream().forEach((entry)->{
-            System.out.println(entry.getKey()+" "+entry.getValue());
+        map.entrySet().parallelStream().forEach((entry) -> {
+            System.out.println(entry.getKey() + " " + entry.getValue());
         });
 
         StringBuffer buffer = new StringBuffer("AAAAAAAA");

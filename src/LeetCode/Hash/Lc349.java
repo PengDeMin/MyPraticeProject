@@ -14,11 +14,11 @@ import java.util.stream.Collectors;
 
 public class Lc349 {
     public static void main(String[] args) {
-        int[] nums1 = new int[]{1,2,2,1};
-        int[] nums2 = new int[]{2,2,1};
+        int[] nums1 = new int[]{1, 2, 2, 1};
+        int[] nums2 = new int[]{2, 2, 1};
         int[] res = intersection2(nums1, nums2);
         for (int re : res) {
-            System.out.print(re+" ");
+            System.out.print(re + " ");
         }
     }
 
@@ -34,7 +34,7 @@ public class Lc349 {
         for (int num : nums2) {
             ++freNum2[num];
         }
-        for(int index = 0; index <freNum1.length;index++) {
+        for (int index = 0; index < freNum1.length; index++) {
             if (freNum1[index] > 0 && freNum2[index] > 0) {
                 resList.add(index);
             }

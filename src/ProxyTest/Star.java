@@ -9,5 +9,6 @@ package ProxyTest;
 public interface Star {
 
     String sing(String songName);
+
     void dance();
 }

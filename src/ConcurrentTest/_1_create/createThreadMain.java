@@ -1,8 +1,6 @@
 package ConcurrentTest._1_create;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 /**
  * @ClassName createThread
@@ -26,27 +24,29 @@ public class createThreadMain {
         Runnable target = new Runnable() {
             @Override
             public void run() {
-                for (int i = 0; i <=5;i++){
-                    System.out.println("此刻是线程"+Thread.currentThread().getName()+"在输出"+i);
+                for (int i = 0; i <= 5; i++) {
+                    System.out.println("此刻是线程" + Thread.currentThread().getName() + "在输出" + i);
                 }
-            };
+            }
+
+            ;
         };
         new Thread(target).start();
 
         //简化形式1
-        new Thread((new Runnable(){
+        new Thread((new Runnable() {
             @Override
             public void run() {
-                for (int i = 0; i <=5;i++){
-                    System.out.println("此刻是线程"+Thread.currentThread().getName()+"在输出"+i);
+                for (int i = 0; i <= 5; i++) {
+                    System.out.println("此刻是线程" + Thread.currentThread().getName() + "在输出" + i);
                 }
             }
         })).start();
 
         //简化形式2：使用Lambada表达式,因为Runnable是函数式接口
-        new Thread(()->{
-            for (int i = 0; i <=5;i++){
-                System.out.println("此刻是线程"+Thread.currentThread().getName()+"在输出"+i);
+        new Thread(() -> {
+            for (int i = 0; i <= 5; i++) {
+                System.out.println("此刻是线程" + Thread.currentThread().getName() + "在输出" + i);
             }
         }).start();
 
@@ -55,13 +55,16 @@ public class createThreadMain {
         //将callable对象封装成FutureTask对象，未来任务对象的作用：
         //1、未来任务对象实现了Runnable，方便后面把它交给线程对象
         //2、可以在线程执行完毕后，用未来任务对象.get获取执行结果
-        FutureTask<String> task  = new FutureTask(callTarget);
+        FutureTask<String> task = new FutureTask(callTarget);
         new Thread(task).start();
         System.out.println(task.get());
 
 
-        for (int i = 6; i <=10;i++){
-            System.out.println("此刻是线程"+Thread.currentThread().getName()+"在输出"+i);
+//        Future<String> oldFuture = new FutureTask<>(callTarget);
+//        ExecutorService es = null;
+//        es.submit(callTarget)
+        for (int i = 6; i <= 10; i++) {
+            System.out.println("此刻是线程" + Thread.currentThread().getName() + "在输出" + i);
         }
 
     }

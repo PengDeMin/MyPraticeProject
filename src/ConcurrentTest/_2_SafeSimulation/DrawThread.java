@@ -7,7 +7,7 @@ package ConcurrentTest._2_SafeSimulation;
  * @Date 2024/6/1 12:35
  */
 
-public class DrawThread extends Thread{
+public class DrawThread extends Thread {
     private Account acc;
 
     public DrawThread(String name, Account acc) {
@@ -15,9 +15,10 @@ public class DrawThread extends Thread{
         this.acc = acc;
     }
 
-    public DrawThread(Account acc){
+    public DrawThread(Account acc) {
         this.acc = acc;
     }
+
     @Override
     public void run() {
         acc.drawMoney(10000);

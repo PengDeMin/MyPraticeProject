@@ -10,7 +10,7 @@ package ConcurrentTest._5_LockTest;
 public class MainTest {
     public static void main(String[] args) {
         Runnable test = new CalRuunable();
-        for (int i = 0; i <100; i++) {
+        for (int i = 0; i < 100; i++) {
             new Thread(test).start();
         }
     }

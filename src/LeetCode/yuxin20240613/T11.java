@@ -15,19 +15,19 @@ public class T11 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int n =  in.nextInt();
+        int n = in.nextInt();
         int a = in.nextInt();
         int b = in.nextInt();
 
-        Map<Integer,Integer> freRec= new HashMap<>();
+        Map<Integer, Integer> freRec = new HashMap<>();
         //输入n个整数
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             int number = in.nextInt();
-            freRec.put(number,freRec.getOrDefault(number,0)+1);
+            freRec.put(number, freRec.getOrDefault(number, 0) + 1);
         }
         //找到出现b次的数字并输出
-        for (Map.Entry<Integer,Integer> entry: freRec.entrySet()){
-            if (entry.getValue().equals(b)){
+        for (Map.Entry<Integer, Integer> entry : freRec.entrySet()) {
+            if (entry.getValue().equals(b)) {
                 System.out.println(entry.getKey());
                 break;
             }

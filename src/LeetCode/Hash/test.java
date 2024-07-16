@@ -13,14 +13,14 @@ import java.util.List;
 
 public class test {
     public static void main(String[] args) {
-        int start = 0, end = 3,index = 0;
+        int start = 0, end = 3, index = 0;
         String str = new String("HelloWorld");
         //看长度、空不空、相等比较、包含、替换、
         int length = str.length();
         boolean empty = str.isEmpty();
         boolean helloWorld = str.equals("HelloWorld");
         boolean s = str.contains("s");
-        str.replace('l','h');
+        str.replace('l', 'h');
         //分割，返回范围[start,end-1]
         str.substring(start, end);
         //取字符
@@ -33,7 +33,7 @@ public class test {
         char[] clone = charArray.clone();
         boolean equals = charArray.equals(new char[]{'2', '3'});
         String s1 = new String(charArray);
-        for (int i = 0; i < length1; i++){
+        for (int i = 0; i < length1; i++) {
             //TODO;
         }
         Arrays.sort(charArray);
@@ -45,8 +45,8 @@ public class test {
         StringBuffer buffer = new StringBuffer(str);
         int length2 = buffer.length();
         char c1 = buffer.charAt(start);
-        buffer.setCharAt(start,'a');
-        buffer.delete(start,1);
+        buffer.setCharAt(start, 'a');
+        buffer.delete(start, 1);
         buffer.deleteCharAt(start);
         String substring = buffer.substring(start, end);
         buffer.append("aaa");
@@ -56,7 +56,7 @@ public class test {
         List<String> strings = Arrays.asList(str);
         int size = strings.size();
         strings.isEmpty();
-        strings.add(start,"sas");
+        strings.add(start, "sas");
         strings.get(1);
         strings.remove(1);
         boolean sas = strings.contains("sas");

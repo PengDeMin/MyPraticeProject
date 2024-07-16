@@ -27,22 +27,22 @@ public class Lc202 {
         Set<Integer> set = new HashSet<>();
         //下面这句是核心重点，如果n不是快乐数，则其在不断迭代求各位置数平方和的过程中
         //必然会出现和重复的情况，因为题目提示了不是快乐数时会“无限循环”
-        while(n!=1 && !set.contains(n)){
+        while (n != 1 && !set.contains(n)) {
             set.add(n);
             n = getSquSum(n);
         }
         //通过n值判断退出循环的原因，等于1说明是快乐数，否则只是因为出现重复值
-        return n==1 ? true : false;
+        return n == 1 ? true : false;
     }
 
     //取出n各个位置的数字并求平方和
-     public static int getSquSum(int n){
-         int squSum = 0;
-         while(n>0){
-             squSum += (n%10) * (n%10);
-             n /=10 ;
-         }
-         return squSum;
-     }
+    public static int getSquSum(int n) {
+        int squSum = 0;
+        while (n > 0) {
+            squSum += (n % 10) * (n % 10);
+            n /= 10;
+        }
+        return squSum;
+    }
 
 }

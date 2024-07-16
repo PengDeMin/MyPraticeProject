@@ -24,8 +24,8 @@ public class CreatePool {
          * ThreadFactory threadFactory,线程工厂
          * RejectedExecutionHandler handler，忙不过来的拒绝策略
          */
-        ExecutorService pool = new ThreadPoolExecutor(3,5,8,TimeUnit.SECONDS,
-                new ArrayBlockingQueue<>(4),Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());
+        ExecutorService pool = new ThreadPoolExecutor(3, 5, 8, TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(4), Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 
         /**
          *二、方式二通过Executors工具类创建线程池，
@@ -60,7 +60,6 @@ public class CreatePool {
         //pool.shutdownNow();//立即关闭线程池，关闭后抛出异常显示没有执行完成的任务，这个在实际中很少用
 
     }
-
 
 
 }

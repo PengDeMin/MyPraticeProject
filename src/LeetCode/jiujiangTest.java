@@ -18,23 +18,23 @@ public class jiujiangTest {
         int n = sc.nextInt();
         int k = sc.nextInt();
         String str = sc.next();
-        if (str.length() != n){
+        if (str.length() != n) {
             return;
         }
         int strLength = str.length();
-        int result = 0 ;
+        int result = 0;
         Set<Character> tempSet = new HashSet<>();
         //一共可以删除1~(strLength-k)长度的子串
-        for(int i = 1; i <= strLength-k; i++){
-            for(int j = 0; j+i<= strLength;j++){
+        for (int i = 1; i <= strLength - k; i++) {
+            for (int j = 0; j + i <= strLength; j++) {
                 //String tempStr = str.replaceAll(str.substring(j,j+i), "");
-                String tempStr = str.substring(0,j)+str.substring(j+i,strLength);
+                String tempStr = str.substring(0, j) + str.substring(j + i, strLength);
                 System.out.println(tempStr);
                 tempSet.clear();
                 for (char c : tempStr.toCharArray()) {
                     tempSet.add(c);
                 }
-                if(tempSet.size()>=k){
+                if (tempSet.size() >= k) {
                     result++;
                 }
             }

@@ -15,7 +15,7 @@ public class T2 {
     //存放a数组
     static final long[] a = new long[100010];
     //存放a+b
-    static final Map<Long,Long> sumMap = new HashMap<>();
+    static final Map<Long, Long> sumMap = new HashMap<>();
     //存放c数组
     //static final Map<Long,Long> cMap = new HashMap<>();
 
@@ -25,27 +25,26 @@ public class T2 {
         //输入数组大小
         long arrayLen = scanner.nextInt();
         //输入数组a
-        for(int i = 0; i < arrayLen; i++) {
+        for (int i = 0; i < arrayLen; i++) {
             a[i] = scanner.nextLong();
         }
         //输入数组b的值，直接想加(注意可能冲出现重复值)，不需要额外空间
-        for(int i = 0; i < arrayLen; i++){
+        for (int i = 0; i < arrayLen; i++) {
             long numB = scanner.nextLong();
             a[i] += numB;
             //放入a+b,若出现重复值则频数+1
-            sumMap.put(a[i],sumMap.getOrDefault(a[i],0L)+1);
+            sumMap.put(a[i], sumMap.getOrDefault(a[i], 0L) + 1);
         }
         //输入数组C
-        for(int i = 0; i<arrayLen; i++){
+        for (int i = 0; i < arrayLen; i++) {
             long numC = scanner.nextLong();
-            if(sumMap.containsKey(numC)){
+            if (sumMap.containsKey(numC)) {
                 //交集加一；
                 res++;
-                long newFre = sumMap.get(numC)-1;
-                if(newFre>0){
-                    sumMap.put(numC,newFre);
-                }
-                else{
+                long newFre = sumMap.get(numC) - 1;
+                if (newFre > 0) {
+                    sumMap.put(numC, newFre);
+                } else {
                     sumMap.remove(numC);
                 }
             }

@@ -26,12 +26,12 @@ public class Student implements Serializable {
     }
 
     //无参构造器
-    Student(){
+    Student() {
         System.out.println("父类的无参构造器");
     }
 
     //有参构造器
-    Student(String name, int age, float score){
+    Student(String name, int age, float score) {
         this.name = name;
         this.age = age;
         this.score = score;
@@ -66,9 +66,9 @@ public class Student implements Serializable {
     //是学生类的名字+对象存储hashCode，如：SerializableTest.Student@30c7da1e
     @Override
     public String toString() {
-        return "Student [name=" + name+
-                ", age=" +age +
+        return "Student [name=" + name +
+                ", age=" + age +
                 ", score=" + score +
-                ", hobby= " + hobby+ "]";
+                ", hobby= " + hobby + "]";
     }
 }

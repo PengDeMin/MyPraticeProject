@@ -23,22 +23,22 @@ public class One_5_Lc367_easy {
     //很简单，如果一个数是完全平方数，则一定可以在{1,2,3,4....,num}的有序数列中
     //通过二分查找定位到这个数
     private static boolean isPerfectSquare(int num) {
-        if(num<2){
+        if (num < 2) {
             return true;
         }
         int left = 0;
         int right = num;
-        while(left < right){
-            int mid = left + (right-left)/2;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
             //由于利用相乘来计算会导致数据溢出，因此计算相除
             // int temp = mid*mid;
             //为了防止5/2=2从而判定5是有效完全平方数
-            if(num/mid == mid && num%mid ==0){
+            if (num / mid == mid && num % mid == 0) {
                 //说明此num的算术平方根是整数，因此能在{1,2,3...num}的有序序列中找到这个数
                 return true;
-            }else if(num/mid < mid){
+            } else if (num / mid < mid) {
                 right = mid;
-            }else{
+            } else {
                 left = mid + 1;
             }
         }

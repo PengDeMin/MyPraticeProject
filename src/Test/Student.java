@@ -13,12 +13,12 @@ public class Student {
     private float score;
 
     //无参构造器
-    Student(){
+    Student() {
         System.out.println("父类的无参构造器");
     }
 
     //有参构造器
-    Student(String name, int age, float score){
+    Student(String name, int age, float score) {
         this.name = name;
         this.age = age;
         this.score = score;

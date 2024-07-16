@@ -10,15 +10,15 @@ package LeetCode.String;
 
 public class Lc344_541 {
     public static void main(String[] args) {
-        char[] s =new char[]{'h','e','l','l','o'};
+        char[] s = new char[]{'h', 'e', 'l', 'l', 'o'};
         //System.out.println(reverseString(s));
         System.out.println(reverseStr("abcdefg", 9));
     }
 
     //344反转字符串
     public static char[] reverseString(char[] s) {
-        int left = 0, right = s.length-1;
-        while(left<right){
+        int left = 0, right = s.length - 1;
+        while (left < right) {
             //字符交换方式1
             //这种方式left<right和left<=right都可以
 //            char tmp = s[left];
@@ -41,7 +41,7 @@ public class Lc344_541 {
         char[] str = s.toCharArray();
         int i = 0;
         int rightBound = 0;//右边界
-        do{
+        do {
             int left = 2 * k * i;
             //看到本轮时，数组所剩余元素还够不够k个，够则继续取k个置换，否则只能将就点有多少取多少
             rightBound = (left + (k - 1)) <= s.length() - 1 ? (left + (k - 1)) : s.length() - 1;
@@ -52,7 +52,7 @@ public class Lc344_541 {
                 str[right--] = temp;
             }
             i++;
-        }while(rightBound<s.length()-1);//如果本轮置换的右边界已经碰到数组末尾了，就该停止了
+        } while (rightBound < s.length() - 1);//如果本轮置换的右边界已经碰到数组末尾了，就该停止了
 
         //千万不能用str.tostring(),这个方法返回的是char[]的类名等信息;
         return new String(str);
@@ -61,10 +61,10 @@ public class Lc344_541 {
     //541反转字符串II(别人的优化版本)
     public static String reverseStr2(String s, int k) {
         char[] str = s.toCharArray();
-        for(int i = 0; i<str.length; i+=2*k){
-            int start =i;
-            int end = Math.min(start+k-1,str.length);
-            while(start<end){
+        for (int i = 0; i < str.length; i += 2 * k) {
+            int start = i;
+            int end = Math.min(start + k - 1, str.length);
+            while (start < end) {
                 char temp = str[start];
                 str[start++] = str[end];
                 str[end--] = temp;

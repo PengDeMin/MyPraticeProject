@@ -11,7 +11,7 @@ package com.tank.app;
  * 程序入口
  */
 public class GameMain {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         new GameFrame();
     }
 }

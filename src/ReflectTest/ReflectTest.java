@@ -23,9 +23,9 @@ public class ReflectTest {
         Student s1 = (Student) getClassConstructor(calssObject);
         System.out.println(s1.getName());
         //获取类对象的成员变量，目的是为了赋值
-        getField(calssObject,s1);
+        getField(calssObject, s1);
         //获取类对象的成员方法，目的是为了执行
-        getMethod(calssObject,s1);
+        getMethod(calssObject, s1);
     }
 
     //反射第一步：获取类对象的三种方式
@@ -41,8 +41,8 @@ public class ReflectTest {
         System.out.println(c3.getName());
 
         //因为类只加载一次，所以三个引用指向的是同一个对象
-        System.out.println(c1==c2);
-        System.out.println(c1==c3);
+        System.out.println(c1 == c2);
+        System.out.println(c1 == c3);
         return c1;
     }
 
@@ -51,12 +51,12 @@ public class ReflectTest {
         //1、获取全部public修饰的构造器
         Constructor[] constructors = classObject.getConstructors();
         for (Constructor constructor : constructors) {
-            System.out.println("public的："+constructor.getName()+"--->"+constructor.getParameterCount());
+            System.out.println("public的：" + constructor.getName() + "--->" + constructor.getParameterCount());
         }
         //2、获取全部存在的构造器
         Constructor[] declaredConstructors = classObject.getDeclaredConstructors();
         for (Constructor constructor : declaredConstructors) {
-            System.out.println("全部存在的："+constructor.getName()+"--->"+constructor.getParameterCount());
+            System.out.println("全部存在的：" + constructor.getName() + "--->" + constructor.getParameterCount());
         }
         //3、获取某个public修饰的构造器，比如传入参数获取有参构造器，String.class才代表String类型
         Constructor constructor = classObject.getConstructor(String.class, int.class, float.class);
@@ -64,7 +64,7 @@ public class ReflectTest {
         Constructor declaredConstructor = classObject.getDeclaredConstructor(String.class, int.class, float.class);
 
         //获取类构造器的作用：初始化类对象并返回
-       return constructor.newInstance("民哥",26,100);
+        return constructor.newInstance("民哥", 26, 100);
     }
 
     //反射之获取类的成员变量
@@ -78,7 +78,7 @@ public class ReflectTest {
         Field age = object.getDeclaredField("score");
         //传进来一个类对象实例，并进行它的这个属性赋值
         age.setAccessible(true);//避开安全检查
-        age.set(s1,(float)85.5);
+        age.set(s1, (float) 85.5);
         System.out.println(age.get(s1));
     }
 
@@ -88,11 +88,11 @@ public class ReflectTest {
         Method[] methods = object.getMethods();
         Method[] declaredMethods = object.getDeclaredMethods();
         //获取某个成员方法,第二个参数要加上方法接受参数的类型
-        Method setAge = object.getDeclaredMethod("setAge",int.class);
+        Method setAge = object.getDeclaredMethod("setAge", int.class);
         //输出这个成员方法的信息
-        System.out.println(setAge.getName()+"---"
-                +setAge.getParameterCount()+"---"
-                +setAge.getReturnType());
+        System.out.println(setAge.getName() + "---"
+                + setAge.getParameterCount() + "---"
+                + setAge.getReturnType());
         //执行这个成员方法,无返回值的方法执行完，接受的返回结果自然为null
         Object invoke = setAge.invoke(s1, 55);
         System.out.println(invoke);//null

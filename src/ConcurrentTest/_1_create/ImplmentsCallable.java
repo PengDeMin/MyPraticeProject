@@ -21,10 +21,10 @@ public class ImplmentsCallable implements Callable<String> {
     public String call() {
         //System.out.println("此时执行的线程是："+Thread.currentThread().getName());
         int sum = 0;
-        for (int i = 0; i <=n;i++){
+        for (int i = 0; i <= n; i++) {
             sum += i;
         }
-        return "线程"+Thread.currentThread().getName()+"计算出的数据是"+sum;
+        return "线程" + Thread.currentThread().getName() + "计算出的数据是" + sum;
     }
 
 }

@@ -25,10 +25,10 @@ public class Constant {
     public static final int STATE_HELP = 1;
     public static final int STATE_ABOUT = 2;
     public static final int STATE_RUN = 3;
-    public static final int STATE_OVER= 4;
+    public static final int STATE_OVER = 4;
 
-    public static final String[] MENUS = {"开始游戏", "继续游戏","游戏帮助","游戏关于","退出游戏"};
-    public static final Font GAME_FONT = new Font("宋体", Font.BOLD,24);
+    public static final String[] MENUS = {"开始游戏", "继续游戏", "游戏帮助", "游戏关于", "退出游戏"};
+    public static final Font GAME_FONT = new Font("宋体", Font.BOLD, 24);
 
     public static final int REPAINT_INTERVAL = 100;
 }

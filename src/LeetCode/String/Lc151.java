@@ -16,7 +16,7 @@ public class Lc151 {
     //自己按照直面思想做的版本，还是边调试边找问题才做对的，而且用时和内存都不占优，用了四个指针
     public static String reverseWords(String s) {
         //单只有一个单词且就一个字母的，直接返回
-        if(s.length()==1){
+        if (s.length() == 1) {
             return s;
         }
         char[] str = s.toCharArray();
@@ -29,11 +29,11 @@ public class Lc151 {
                 ++leftStart;
             }
             //1.2找左边单词结尾(单词可能只有一个字母)
-            if(leftStart > rightEnd){
+            if (leftStart > rightEnd) {
                 break;
             }
             leftEnd = leftStart;
-            while (leftEnd<str.length && str[leftEnd] != ' ') {
+            while (leftEnd < str.length && str[leftEnd] != ' ') {
                 ++leftEnd;
             }
             //1.3确定左边单词并添加进右半边字符串
@@ -52,19 +52,18 @@ public class Lc151 {
                 --rightStart;
             }
             //3.3确定右边单词并加进左半边字符串,要增加判断上面的右边单词循环结束到第有没有找到有效的单词
-            if(leftEnd < rightEnd){
-                leftStr = leftStr + " " + s.substring(rightStart + 1, rightEnd+1);
+            if (leftEnd < rightEnd) {
+                leftStr = leftStr + " " + s.substring(rightStart + 1, rightEnd + 1);
                 //更新右边单词寻找索引
                 rightEnd = rightStart;
             }
         }
         //要看leftstr是否为空，因为如果只有一个单词，则会被rightStr收录到，导致leftstr为空
-        if(!leftStr.isEmpty()){
+        if (!leftStr.isEmpty()) {
             //去除首尾的空格
-            return leftStr.substring(1)+ " "+ rightStr.substring(0,rightStr.length()-1);
-        }
-        else{
-            return rightStr.substring(0,rightStr.length()-1);
+            return leftStr.substring(1) + " " + rightStr.substring(0, rightStr.length() - 1);
+        } else {
+            return rightStr.substring(0, rightStr.length() - 1);
         }
     }
 
@@ -90,8 +89,12 @@ public class Lc151 {
         int start = 0;
         int end = s.length() - 1;
         //跳过首尾的空格
-        while (s.charAt(start) == ' ') {start++;}
-        while (s.charAt(end) == ' ') {end--;}
+        while (s.charAt(start) == ' ') {
+            start++;
+        }
+        while (s.charAt(end) == ' ') {
+            end--;
+        }
         StringBuilder sb = new StringBuilder();
         while (start <= end) {
             char c = s.charAt(start);

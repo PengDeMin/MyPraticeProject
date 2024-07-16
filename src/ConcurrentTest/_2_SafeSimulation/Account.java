@@ -42,9 +42,9 @@ public class Account {
         this.money = money;
     }
 
-    private static void test1(){
+    private static void test1() {
         //在静态方法中对同步代码块加锁使用类字节码对象，系统仅此一份
-        synchronized (Account.class){
+        synchronized (Account.class) {
 
         }
     }
@@ -57,12 +57,11 @@ public class Account {
         //synchronized ("字符串的锁对象") {
         //应该采用每家人自己的账户account作为锁对象,上锁只会锁住自己家的账户，不影响别的账户取钱
         synchronized (this) {
-            if(this.money>=i){
+            if (this.money >= i) {
                 this.money -= i;
-                System.out.println(name+"来取"+i+"元啦！取钱成功，余额为："+money+"元");
-            }
-            else{
-                System.out.println(name+"来取"+i+"元啦！取钱失败，余额不足！");
+                System.out.println(name + "来取" + i + "元啦！取钱成功，余额为：" + money + "元");
+            } else {
+                System.out.println(name + "来取" + i + "元啦！取钱失败，余额不足！");
             }
         }
 
@@ -72,12 +71,11 @@ public class Account {
     public synchronized void drawMoney2(double i) {
         //搞清楚谁来取钱
         String name = Thread.currentThread().getName();
-        if(this.money>=i){
+        if (this.money >= i) {
             this.money -= i;
-            System.out.println(name+"来取"+i+"元啦！取钱成功，余额为："+money+"元");
-        }
-        else{
-            System.out.println(name+"来取"+i+"元啦！取钱失败，余额不足！");
+            System.out.println(name + "来取" + i + "元啦！取钱成功，余额为：" + money + "元");
+        } else {
+            System.out.println(name + "来取" + i + "元啦！取钱失败，余额不足！");
         }
 
     }
@@ -88,13 +86,12 @@ public class Account {
         String name = Thread.currentThread().getName();
         //进来的线程对自家账户加锁
         lk.lock();
-        try{
-            if(this.money>=i){
+        try {
+            if (this.money >= i) {
                 this.money -= i;
-                System.out.println(name+"来取"+i+"元啦！取钱成功，余额为："+money+"元");
-            }
-            else{
-                System.out.println(name+"来取"+i+"元啦！取钱失败，余额不足！");
+                System.out.println(name + "来取" + i + "元啦！取钱成功，余额为：" + money + "元");
+            } else {
+                System.out.println(name + "来取" + i + "元啦！取钱失败，余额不足！");
             }
         } finally {
             //进来的线程执行完对自家账户解锁

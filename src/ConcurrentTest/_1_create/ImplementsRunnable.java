@@ -7,12 +7,12 @@ package ConcurrentTest._1_create;
  * @Date 2024/5/19 17:21
  */
 
-public class ImplementsRunnable implements Runnable{
+public class ImplementsRunnable implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i <=3;i++){
-            System.out.println("线程"+Thread.currentThread().getName()+"在输出"+i);
+        for (int i = 0; i <= 3; i++) {
+            System.out.println("线程" + Thread.currentThread().getName() + "在输出" + i);
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {

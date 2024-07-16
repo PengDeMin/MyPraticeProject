@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 
 public class Two_4_Lc977_easy {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         int[] nums = Arrays.stream(input.split(","))
@@ -20,7 +20,7 @@ public class Two_4_Lc977_easy {
                 .toArray();
         int[] res = sortedSquares(nums);
         for (int num : res) {
-            System.out.print(num+",");
+            System.out.print(num + ",");
         }
     }
 
@@ -28,12 +28,12 @@ public class Two_4_Lc977_easy {
     private static int[] sortedSquares(int[] nums) {
         int[] res = new int[nums.length];
         int left = 0;
-        int right = nums.length-1;
-        int i = nums.length-1;
+        int right = nums.length - 1;
+        int i = nums.length - 1;
         //下面等号不能漏，否则会少处理一个元素
-        while(left <= right){
+        while (left <= right) {
             res[i--] = Math.abs(nums[left]) <= Math.abs(nums[right]) ?
-                    nums[right]*nums[right--] : nums[left]*nums[left++] ;
+                    nums[right] * nums[right--] : nums[left] * nums[left++];
         }
         return res;
     }

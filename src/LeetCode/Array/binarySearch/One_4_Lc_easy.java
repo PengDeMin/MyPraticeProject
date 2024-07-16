@@ -12,8 +12,7 @@ import java.util.Scanner;
  * @Date 2024/7/13 14:41
  */
 
-public class One_4_Lc_easy
-{
+public class One_4_Lc_easy {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
@@ -21,21 +20,21 @@ public class One_4_Lc_easy
     }
 
     private static int mySqrt(int x) {
-        if(x<2){
+        if (x < 2) {
             return x;
         }
         int left = 0;
         int right = x;
-        while(left < right){
-            int mid = left + (right-left)/2;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
             //由于利用相乘来计算会导致数据溢出，因此计算相除
-           // int temp = mid*mid;
-            if(x/mid == mid){
+            // int temp = mid*mid;
+            if (x / mid == mid) {
                 //说明此x的算术平方根是整数，因此能在{1,2,3...x}的有序序列中找到这个数
                 return mid;
-            }else if(x/mid < mid){
+            } else if (x / mid < mid) {
                 right = mid;
-            }else{
+            } else {
                 left = mid + 1;
             }
         }

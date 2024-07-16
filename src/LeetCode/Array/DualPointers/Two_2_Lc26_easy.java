@@ -23,19 +23,19 @@ public class Two_2_Lc26_easy {
         int[] nums = Arrays.stream(input.split(",")).mapToInt(Integer::parseInt).toArray();
         System.out.println(removeDuplicates(nums));
         for (int num : nums) {
-            System.out.print(num+",");
+            System.out.print(num + ",");
         }
     }
 
     //快慢双指针
     private static int removeDuplicates(int[] nums) {
-        int slow = 0 ;
-        for (int fast = 0; fast < nums.length; fast++){
-            if(nums[fast] != nums[slow]){
+        int slow = 0;
+        for (int fast = 0; fast < nums.length; fast++) {
+            if (nums[fast] != nums[slow]) {
                 nums[++slow] = nums[fast];
             }
         }
-        return slow+1;
+        return slow + 1;
     }
 
 

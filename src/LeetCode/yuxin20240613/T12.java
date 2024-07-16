@@ -18,16 +18,16 @@ public class T12 {
         int yuanCount = 0;
         int fuCount = 0;
         //遍历字符串
-        for(char c : cArray){
+        for (char c : cArray) {
             //如果是元音字母则元音字母个数加1
-            if(yuanString.indexOf(c)>-1){
-                yuanCount+=1;
+            if (yuanString.indexOf(c) > -1) {
+                yuanCount += 1;
             }
         }
         //统计辅音字母个数
-        fuCount = cArray.length-yuanCount;
+        fuCount = cArray.length - yuanCount;
         //使用贪心算法估计最长合法单词长度
-        int maxWordLen = Math.min(yuanCount+1,fuCount)+yuanCount;
+        int maxWordLen = Math.min(yuanCount + 1, fuCount) + yuanCount;
         System.out.println(maxWordLen);
     }
 }

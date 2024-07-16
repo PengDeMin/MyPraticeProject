@@ -12,16 +12,16 @@ import java.util.Scanner;
  */
 
 public class One_3_Lc34_mid {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] nums = Arrays.stream(sc.next().split(","))
                 .mapToInt(Integer::parseInt)
                 .toArray();
         int target = sc.nextInt();
         int[] res = new int[2];
-        res[0] = binarySearch(nums, target,true);
+        res[0] = binarySearch(nums, target, true);
         res[1] = binarySearch(nums, target, false);
-        System.out.println(res[0]+","+res[1]);
+        System.out.println(res[0] + "," + res[1]);
     }
 
     //左闭右开的写法
@@ -29,19 +29,19 @@ public class One_3_Lc34_mid {
         int left = 0;
         int right = nums.length;
         int boundary = -1;
-        while (left < right){
-            int mid = left + (right-left)/2;
-            if(nums[mid] == target){
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
                 boundary = mid;
                 //找左边界
-                if(isFindLeft){
+                if (isFindLeft) {
                     right = mid;
-                }else {
+                } else {
                     left = mid + 1;
                 }
-            }else if(nums[mid] > target){
+            } else if (nums[mid] > target) {
                 right = mid;
-            }else{
+            } else {
                 left = mid + 1;
             }
         }
