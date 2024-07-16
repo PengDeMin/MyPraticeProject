@@ -1,4 +1,4 @@
-package CreationalPatterns.FactoryMethod.CreateHuman;
+package PatternDesgin.CreationalPatterns.FactoryMethod.CreateHuman;
 
 /**
  * @ClassName WhiteHuman

@@ -1,7 +1,7 @@
-package CreationalPatterns.BuilderPattern.Director;
+package PatternDesgin.CreationalPatterns.BuilderPattern.Director;
 
-import CreationalPatterns.BuilderPattern.Builder.KFCMealBuilder;
-import CreationalPatterns.BuilderPattern.Product.KFCMeal;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Builder.KFCMealBuilder;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Product.KFCMeal;
 
 /**
  * @ClassName KFCDierctor

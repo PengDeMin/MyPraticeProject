@@ -1,6 +1,6 @@
-package CreationalPatterns.BuilderPattern.Client;
+package PatternDesgin.CreationalPatterns.BuilderPattern.Client;
 
-import CreationalPatterns.BuilderPattern.Director.ComputerDirector;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Director.ComputerDirector;
 
 import java.io.IOException;
 import java.util.Scanner;

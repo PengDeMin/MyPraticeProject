@@ -1,6 +1,7 @@
-package CreationalPatterns.BuilderPattern.ConcreteBuilder;
+package PatternDesgin.CreationalPatterns.BuilderPattern.ConcreteBuilder;
 
-import CreationalPatterns.BuilderPattern.Builder.KFCMealBuilder;
+
+import PatternDesgin.CreationalPatterns.BuilderPattern.Builder.KFCMealBuilder;
 
 /**
  * @ClassName SubMealBuilderA

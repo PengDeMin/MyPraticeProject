@@ -1,8 +1,8 @@
-package CreationalPatterns.BuilderPattern.Director;
+package PatternDesgin.CreationalPatterns.BuilderPattern.Director;
 
-import CreationalPatterns.BuilderPattern.Builder.ComputerBuilder;
-import CreationalPatterns.BuilderPattern.ConcreteBuilder.GameComputerWorker;
-import CreationalPatterns.BuilderPattern.ConcreteBuilder.OfficeComputerWorker;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Builder.ComputerBuilder;
+import PatternDesgin.CreationalPatterns.BuilderPattern.ConcreteBuilder.GameComputerWorker;
+import PatternDesgin.CreationalPatterns.BuilderPattern.ConcreteBuilder.OfficeComputerWorker;
 
 /**
  * @ClassName ComputerDierctor

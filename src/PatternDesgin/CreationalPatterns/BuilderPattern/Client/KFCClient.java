@@ -1,8 +1,8 @@
-package CreationalPatterns.BuilderPattern.Client;
+package PatternDesgin.CreationalPatterns.BuilderPattern.Client;
 
-import CreationalPatterns.BuilderPattern.ConcreteBuilder.KFCSubMealBuilderA;
-import CreationalPatterns.BuilderPattern.Director.KFCDirector;
-import CreationalPatterns.BuilderPattern.Product.KFCMeal;
+import PatternDesgin.CreationalPatterns.BuilderPattern.ConcreteBuilder.KFCSubMealBuilderA;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Director.KFCDirector;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Product.KFCMeal;
 
 /**
  * @ClassName KFCClient

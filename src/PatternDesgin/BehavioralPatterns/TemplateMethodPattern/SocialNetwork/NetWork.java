@@ -1,4 +1,4 @@
-package BehavioralPatterns.TemplateMethodPattern.SocialNetwork;
+package PatternDesgin.BehavioralPatterns.TemplateMethodPattern.SocialNetwork;
 
 import java.nio.charset.StandardCharsets;
 

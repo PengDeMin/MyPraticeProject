@@ -1,6 +1,6 @@
-package CreationalPatterns.BuilderPattern.Builder;
+package PatternDesgin.CreationalPatterns.BuilderPattern.Builder;
 
-import CreationalPatterns.BuilderPattern.Product.Computer;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Product.Computer;
 
 /**
  * @ClassName ComputerBuilder

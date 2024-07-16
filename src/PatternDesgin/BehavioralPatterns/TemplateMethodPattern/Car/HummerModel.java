@@ -1,4 +1,4 @@
-package BehavioralPatterns.TemplateMethodPattern.Car;
+package PatternDesgin.BehavioralPatterns.TemplateMethodPattern.Car;
 
 /**
  * @ClassName HummerModel

@@ -1,6 +1,6 @@
-package CreationalPatterns.BuilderPattern.Client;
+package PatternDesgin.CreationalPatterns.BuilderPattern.Client;
 
-import CreationalPatterns.BuilderPattern.Director.CarDirector;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Director.CarDirector;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package CreationalPatterns.BuilderPattern.Product;
+package PatternDesgin.CreationalPatterns.BuilderPattern.Product;
 
 /**
  * @ClassName CarModel

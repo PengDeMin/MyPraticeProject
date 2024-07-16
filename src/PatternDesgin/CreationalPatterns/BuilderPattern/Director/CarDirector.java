@@ -1,9 +1,9 @@
-package CreationalPatterns.BuilderPattern.Director;
+package PatternDesgin.CreationalPatterns.BuilderPattern.Director;
 
-import CreationalPatterns.BuilderPattern.ConcreteBuilder.BMWWorker;
-import CreationalPatterns.BuilderPattern.ConcreteBuilder.BenzWorker;
-import CreationalPatterns.BuilderPattern.Product.BMWModel;
-import CreationalPatterns.BuilderPattern.Product.BenzModel;
+import PatternDesgin.CreationalPatterns.BuilderPattern.ConcreteBuilder.BMWWorker;
+import PatternDesgin.CreationalPatterns.BuilderPattern.ConcreteBuilder.BenzWorker;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Product.BMWModel;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Product.BenzModel;
 
 import java.util.ArrayList;
 

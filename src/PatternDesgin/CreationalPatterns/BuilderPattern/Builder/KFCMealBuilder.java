@@ -1,6 +1,6 @@
-package CreationalPatterns.BuilderPattern.Builder;
+package PatternDesgin.CreationalPatterns.BuilderPattern.Builder;
 
-import CreationalPatterns.BuilderPattern.Product.KFCMeal;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Product.KFCMeal;
 
 /**
  * @ClassName MealBuilder

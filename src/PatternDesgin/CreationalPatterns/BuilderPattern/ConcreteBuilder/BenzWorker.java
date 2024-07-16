@@ -1,8 +1,8 @@
-package CreationalPatterns.BuilderPattern.ConcreteBuilder;
+package PatternDesgin.CreationalPatterns.BuilderPattern.ConcreteBuilder;
 
-import CreationalPatterns.BuilderPattern.Builder.CarBuilder;
-import CreationalPatterns.BuilderPattern.Product.BenzModel;
-import CreationalPatterns.BuilderPattern.Product.CarModel;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Product.BenzModel;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Product.CarModel;
+import PatternDesgin.CreationalPatterns.BuilderPattern.Builder.CarBuilder;
 
 import java.util.ArrayList;
 

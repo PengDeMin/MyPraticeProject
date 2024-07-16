@@ -1,6 +1,7 @@
-package CreationalPatterns.BuilderPattern.ConcreteBuilder;
+package PatternDesgin.CreationalPatterns.BuilderPattern.ConcreteBuilder;
 
-import CreationalPatterns.BuilderPattern.Builder.ComputerBuilder;
+
+import PatternDesgin.CreationalPatterns.BuilderPattern.Builder.ComputerBuilder;
 
 /**
  * @ClassName GameComputerWorker

@@ -1,4 +1,4 @@
-package BehavioralPatterns.TemplateMethodPattern.Car;
+package PatternDesgin.BehavioralPatterns.TemplateMethodPattern.Car;
 
 import java.io.BufferedReader;
 import java.io.IOException;
