@@ -1,20 +1,25 @@
-package LeetCode.Array;
+package LeetCode.Array.SpiralMatrix;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @ClassName Lc54
- * @Description 力扣54题螺旋矩阵, 使用按层模拟法
- * @Author 彭德民
- * @Date 2024/4/30 20:42
+ * @Author：彭德民
+ * @ClassName：Four_2_Lc54_mid
+ * @Date：2024/7/17 16:48
+ * @Description：螺旋矩阵, 使用按层模拟法
+ *
+ *给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。
+ * 输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
+ * 输出：[1,2,3,6,9,8,7,4,5]
  */
 
-public class Lc54 {
+public class Four_2_Lc54_mid {
     public static void main(String[] args) {
-        int[][] matrix = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        List<Integer> order = spiralOrder(matrix);
-        order.forEach(i -> System.out.println(i));
+
+        int[][] matrix = new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        List<Integer> res = spiralOrder(matrix);
+        res.forEach(i->System.out.println(i));
 
     }
 
@@ -57,8 +62,6 @@ public class Lc54 {
             top++;
             bottom--;
         }
-        int[] a1 = resList.stream().mapToInt(Integer::intValue).toArray();
-        int[] a2;
         return resList;
     }
 }

@@ -1,19 +1,23 @@
-package LeetCode.Array;
+package LeetCode.Array.SpiralMatrix;
+
+import java.util.Scanner;
 
 /**
- * @ClassName Lc59
- * @Description 力扣59题螺旋矩阵II
- * @Author 彭德民
- * @Date 2024/4/30 18:08
+ * @Author：彭德民
+ * @ClassName：Four_1_Lc59_mid
+ * @Date：2024/7/17 15:50
+ * @Description：题螺旋矩阵II
+ * 给你一个正整数 n ，生成一个包含 1 到 n2 所有元素，且元素按顺时针顺序螺旋排列的 n x n 正方形矩阵 matrix 。
  */
 
-public class Lc59 {
+public class Four_1_Lc59_mid {
     public static void main(String[] args) {
-        int[][] res = generateMatrix2(3);
-
-        for (int[] rs : res) {
-            for (int num : rs) {
-                System.out.print(num + "  ");
+        Scanner sc = new Scanner(System.in);
+        int  intNum = sc.nextInt();
+        int[][] res = generateMatrix2(intNum);
+        for (int[] re : res) {
+            for (int i : re) {
+                System.out.print(i+" ");
             }
             System.out.println();
         }
@@ -56,7 +60,7 @@ public class Lc59 {
         return startNum;
     }
 
-    //思想2：按层模拟，考虑边角情况，每一层完成后边角收缩
+    //思想2(这种思想更好)：按层模拟，考虑边角情况，每一层完成后边角收缩
     public static int[][] generateMatrix2(int n) {
         int[][] res = new int[n][n];
         int insertNum = 1;
