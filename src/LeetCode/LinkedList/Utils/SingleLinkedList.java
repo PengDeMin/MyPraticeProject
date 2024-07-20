@@ -11,15 +11,45 @@ package LeetCode.LinkedList.Utils;
 public class SingleLinkedList {
     int size;//链表中元素数量
 
-    ListNode head;
+    public ListNode head;
 
     public SingleLinkedList() {
         size = 0;
-        head = new ListNode<>(null);
+        head = new ListNode(-1);
     }
 
+    public SingleLinkedList(int[] valsArray) {
+        size = 0;
+        head = new ListNode(-1);
+        if(valsArray == null || valsArray.length == 0){
+            return;
+        }
+
+        head.val = valsArray[0];
+        ListNode currentNode = head;
+
+        for (int i = 1; i < valsArray.length; i++) {
+            ListNode newNode = new ListNode(valsArray[i]);
+            currentNode.next =newNode;
+            currentNode = newNode;
+            size++;
+        }
+    }
+
+    //打印链表中的节点
+    public void displayFromOwn(){
+        ListNode temp = head;
+
+        while(temp != null){
+            System.out.print(temp.val + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
+
     //创建链表并返回头结点
-    public <T> ListNode<T> createListFromArray(T[] valsArray) {
+    public ListNode createListFromArray(int[] valsArray) {
         if(valsArray == null || valsArray.length == 0){
             return null;
         }
@@ -28,7 +58,7 @@ public class SingleLinkedList {
         ListNode currentNode = head;
 
         for (int i = 1; i < valsArray.length; i++) {
-            ListNode newNode = new ListNode<>(valsArray[i]);
+            ListNode newNode = new ListNode(valsArray[i]);
             currentNode.next =newNode;
             currentNode = newNode;
             size++;

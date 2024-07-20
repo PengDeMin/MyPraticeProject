@@ -1,5 +1,8 @@
 package LeetCode.LinkedList;
 
+import LeetCode.LinkedList.Utils.ListNode;
+import LeetCode.LinkedList.Utils.SingleLinkedList;
+
 /**
  * @Author：彭德民
  * @ClassName：_1_Lc203_easy
@@ -13,6 +16,29 @@ package LeetCode.LinkedList;
 
 public class _1_Lc203_easy {
     public static void main(String[] args) {
+        int[] valsArray = new int[]{7,7,7,7};
+        int val = 7;
+        SingleLinkedList l = new SingleLinkedList(valsArray);
+//        ListNode head = l.createListFromArray(valsArray);
+//        ListNode newHead = removeElements(head, val);
+        l.displayFromOwn();
 
+        ListNode newHead = removeElements(l.head, val);
+        l.display(newHead);
+    }
+
+
+    public static ListNode removeElements(ListNode head, int val) {
+        ListNode virtualHead = new ListNode(-1,head);
+        ListNode cur = virtualHead;
+
+        while (null != cur.next ) {
+            if(cur.next.val == val){
+                cur.next = cur.next.next;
+            }else{
+                cur= cur.next;
+            }
+        }
+        return virtualHead.next;
     }
 }

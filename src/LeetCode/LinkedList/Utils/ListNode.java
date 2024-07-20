@@ -7,12 +7,12 @@ package LeetCode.LinkedList.Utils;
  * @Description：单列表节点定义
  */
 
-public class ListNode<T> {
-    public T val;
+public class ListNode {
+    public int val;
     public ListNode next;
     public ListNode prev;
 
-    public ListNode(T val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
@@ -20,13 +20,13 @@ public class ListNode<T> {
     }
 
 
-    public ListNode(T val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }
 
 
-    public ListNode(T val, ListNode next, ListNode prev) {
+    public ListNode(int val, ListNode next, ListNode prev) {
         this.val = val;
         this.next = next;
         this.prev = prev;

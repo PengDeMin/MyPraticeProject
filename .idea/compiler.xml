@@ -9,8 +9,5 @@
         <module name="MyPracticeProject" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="GitTest" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

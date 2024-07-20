@@ -17,7 +17,7 @@ public class _1_Lc234_isPalindrome_easy {
 
     {
         Scanner scanner = new Scanner(System.in);
-        Object[] valsArray = Arrays.stream(scanner.nextLine().split(",")).toArray();
+        int[] valsArray = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
         SingleLinkedList linkedList = new SingleLinkedList();
         ListNode head = linkedList.createListFromArray(valsArray);
 

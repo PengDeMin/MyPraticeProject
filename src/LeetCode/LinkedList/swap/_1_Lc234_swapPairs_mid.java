@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class _1_Lc234_swapPairs_mid {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Object[] valsArray = Arrays.stream(scanner.nextLine().split(",")).toArray();
+        int[] valsArray = Arrays.stream(scanner.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
         SingleLinkedList linkedList = new SingleLinkedList();
         ListNode head = linkedList.createListFromArray(valsArray);
 
@@ -28,7 +28,7 @@ public class _1_Lc234_swapPairs_mid {
     两两交换链表中的节点.重点是学会新增一个虚拟头结点
      */
     private static ListNode swapPairs(ListNode head) {
-        ListNode virtualHead = new ListNode<>(null,head);
+        ListNode virtualHead = new ListNode(-1,head);
         ListNode cur = virtualHead;
 
         while(cur.next != null && cur.next.next != null){
