@@ -95,7 +95,7 @@
       <option name="myAdditionalJavadocTags" value="date" />
     </inspection_tool>
     <inspection_tool class="JavadocDeclaration" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ADDITIONAL_TAGS" value="date,Author：彭德民,ClassName：dadsa,Date：2024/7/15,Description：,ClassName：Two_5_Lc283_easy,Date：2024/7/16,Description：TODO" />
+      <option name="ADDITIONAL_TAGS" value="date,Author：彭德民,ClassName：dadsa,Date：2024/7/15,Description：,ClassName：Two_5_Lc283_easy,Date：2024/7/16,Description：TODO,ClassName：CreateList,Date：2024/7/18,Description：接收数组参数，创建列表，并打印输出,ClassName" />
     </inspection_tool>
     <inspection_tool class="MapOrSetKeyShouldOverrideHashCodeEquals" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="MissingJavadoc" enabled="true" level="WARNING" enabled_by_default="true">
@@ -131,9 +131,6 @@
         </Options>
       </option>
     </inspection_tool>
-    <inspection_tool class="SerializableHasSerialVersionUIDField" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ignoreAnonymousInnerClasses" value="false" />
-      <option name="superClassString" value="java.awt.Component" />
-    </inspection_tool>
+    <inspection_tool class="SerializableHasSerialVersionUIDField" enabled="true" level="WARNING" enabled_by_default="true" />
   </profile>
 </component>
