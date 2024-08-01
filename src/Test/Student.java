@@ -1,5 +1,7 @@
 package Test;
 
+import java.util.Comparator;
+
 /**
  * @ClassName Student
  * @Description TODO
@@ -7,7 +9,7 @@ package Test;
  * @Date 2024/3/15 16:16
  */
 
-public class Student {
+public class Student implements Comparable {
     public String name;
     public int age;
     private float score;
@@ -47,5 +49,23 @@ public class Student {
 
     public void setScore(float score) {
         this.score = score;
+    }
+
+
+    @Override
+    public int compareTo(Object obj) {
+        if (!(obj instanceof Student)) {
+            throw new RuntimeException("不是正确对象");
+        }
+
+        Student p = (Student) obj;
+        if (p.age > this.age) {
+            return -1;
+        }
+        //1、先比较年龄，再比较名字
+        if (p.age == this.age) {
+            return this.name.compareTo(p.name);
+        }
+        return 1;
     }
 }

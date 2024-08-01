@@ -81,7 +81,9 @@ public class Lc350 {
         return Arrays.copyOfRange(result, 0, validIndex);
     }
 
-    //没用哈希表，而是用排序+双指针的方法
+    /**
+     * 没用哈希表，而是用排序+双指针的方法
+     */
     public static int[] intersect3(int[] nums1, int[] nums2) {
         //1、先排序成从小到大
         Arrays.sort(nums1);

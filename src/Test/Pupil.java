@@ -21,7 +21,7 @@ public class Pupil extends Student {
         System.out.println(p1 instanceof Object);
     }
 
-    Pupil() {
+    public Pupil() {
         //super();//不管有没有手动写此句，系统都会执行父类的无参构造器。
         //在父类存在多种构造器的情况下，下面带参数语句会匹配
         // 相应构造器，且必须放在第一行
