@@ -97,15 +97,18 @@ public class CreateList {
 
         ListNode cur = head;
         ListNode tmp;
-        ListNode newListHead = null;
+        ListNode pre = null;
 
         while(cur!=null){
+            //先保存下一个节点，因为后面要修改cur.next，不保存则会丢失后面的节点
             tmp = cur.next;
-            cur.next = newListHead;
-            newListHead = cur;
+            //修改当前节点的指向
+            cur.next = pre;
+            //改完pre和cur指针该向后移动一步，去继续更改后面节点的指向了
+            pre = cur;
             cur = tmp;
         }
-        return newListHead;
+        return pre;
     }
 
 

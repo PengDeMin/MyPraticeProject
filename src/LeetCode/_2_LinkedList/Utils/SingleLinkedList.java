@@ -77,5 +77,6 @@ public class SingleLinkedList {
         }
         System.out.println();
     }
+
 }
 
