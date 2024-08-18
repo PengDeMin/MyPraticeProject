@@ -11,7 +11,7 @@ import java.util.List;
  * @Date 2024/5/3 22:44
  */
 
-public class Lc18 {
+public class _3_Lc18_fourSum_mid {
     public static void main(String[] args) {
         int[] nums = new int[]{1000000000, 1000000000, 1000000000, 1000000000};
         int target = -294967296;

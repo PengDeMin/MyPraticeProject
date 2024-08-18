@@ -11,7 +11,7 @@ import java.util.*;
  * @Date 2024/5/3 13:30
  */
 
-public class Lc349 {
+public class _2_Lc349_intersection_easy {
     public static void main(String[] args) {
         int[] nums1 = new int[]{1, 2, 2, 1};
         int[] nums2 = new int[]{2, 2, 1};
@@ -58,5 +58,33 @@ public class Lc349 {
         //先mapToInt(Integer::intValue)：把包装类型拆箱回基本类型
         //再toArray()：变成数组
         return resSet2.stream().mapToInt(Integer::intValue).toArray();
+
+    }
+
+    //排序+双指针,时间复杂度上也就快了一点吧
+    public static int[] intersection3(int[] nums1, int[] nums2) {
+        //1、排序
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+
+        //2、双指针
+        //int[] res = new int[nums2.length + nums1.length];
+        Set<Integer> resSet = new HashSet<>();
+        int index1 = 0, index2 = 0, index = 0;
+        while(index1 < nums1.length && index2 < nums2.length) {
+            int temp1 = nums1[index1], temp2 = nums2[index2];
+            //相等放入交集中
+            if(temp1 == temp2){
+                resSet.add(temp1);
+                index1++;
+                index2++;
+            } else if (temp1 < temp2) {
+                index1++;
+            }
+            else {
+                index2++;
+            }
+        }
+        return resSet.stream().mapToInt(Integer::intValue).toArray();
     }
 }

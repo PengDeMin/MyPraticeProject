@@ -1,5 +1,10 @@
 package LeetCode._3_Hash;
 
+import com.sun.org.apache.xml.internal.serialize.LineSeparator;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @ClassName Lc242
  * @Description 有效的字母异位词(中等)
@@ -7,7 +12,7 @@ package LeetCode._3_Hash;
  * @Date 2024/5/2 15:35
  */
 
-public class Lc242 {
+public class _1_Lc242_isAnagram_easy {
     public static void main(String[] args) {
         //题目说了s和t仅包含小写字母
         String s = "aeeesqer";
@@ -19,6 +24,7 @@ public class Lc242 {
         //1、创建一个长度为26的数组，记录每个字母的频数，刚好有26个字母
         //基本类型的默认值为0
         int[] freRecord = new int[26];
+
 
         //2、处理s字符串中每个字母的频数,往上加
         for (int i = 0; i < s.length(); i++) {

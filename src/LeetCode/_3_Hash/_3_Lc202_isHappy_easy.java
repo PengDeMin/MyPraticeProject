@@ -5,12 +5,12 @@ import java.util.Set;
 
 /**
  * @ClassName Lc202
- * @Description 快乐数
+ * @Description 快乐数 纯粹套路题，不知道套路绝对做不出来的那种
  * @Author 彭德民 简单
  * @Date 2024/5/3 18:55
  */
 
-public class Lc202 {
+public class _3_Lc202_isHappy_easy {
     //对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。
     //然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。
     //如果这个过程 结果为 1，那么这个数就是快乐数。

@@ -14,7 +14,7 @@ import java.util.Map;
  * @Date 2024/5/3 19:39
  */
 
-public class Lc1 {
+public class _1_Lc1_twoSum_easy {
     public static void main(String[] args) {
         int[] nums = new int[]{2, 5, 5, 11};
         int target = 10;
@@ -87,7 +87,7 @@ public class Lc1 {
         //避免因leftNum=rightNum而重复进入第一个if语句
         boolean isLeftGet = false;
         for (int i = 0; i < copyNums.length; i++) {
-            if (copyNums[i] == leftNum && !isLeftGet) {
+            if (!isLeftGet && copyNums[i] == leftNum) {
                 res[0] = i;
                 find++;//找到下标+1
                 isLeftGet = true;

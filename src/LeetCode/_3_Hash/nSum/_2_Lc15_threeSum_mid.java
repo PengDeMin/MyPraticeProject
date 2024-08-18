@@ -11,7 +11,7 @@ import java.util.List;
  * @Date 2024/5/3 21:50
  */
 
-public class Lc15 {
+public class _2_Lc15_threeSum_mid {
     public static void main(String[] args) {
         int[] nums = new int[]{-1, 0, 1, 2, -1, -4};
         int target = 0;
@@ -88,7 +88,7 @@ public class Lc15 {
                         ++left;
                     }
                 }
-                //刚好相等耶，干净记录下来这两个数，并且为防止后面出现一样结果
+                //刚好相等耶，记录下来这两个数，并且为防止后面出现一样结果
                 //要求直接跳过等于当前leftNum和rightNum的数字
                 else {
                     res.add(new ArrayList<Integer>(Arrays.asList(leftNum, rightNum)));
