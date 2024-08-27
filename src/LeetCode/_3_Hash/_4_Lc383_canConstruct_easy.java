@@ -7,7 +7,7 @@ package LeetCode._3_Hash;
  * @Date 2024/5/3 13:14
  */
 
-public class Lc383 {
+public class _4_Lc383_canConstruct_easy {
     public static void main(String[] args) {
         String ransomNote = "aa";
         String magazine = "ab";

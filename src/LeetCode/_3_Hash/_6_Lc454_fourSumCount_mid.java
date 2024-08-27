@@ -10,7 +10,7 @@ import java.util.Map;
  * @Date 2024/5/4 15:46
  */
 
-public class Lc454 {
+public class _6_Lc454_fourSumCount_mid {
     public static void main(String[] args) {
         int[] nums1 = new int[]{1, 2};
         int[] nums2 = new int[]{-2, -1};

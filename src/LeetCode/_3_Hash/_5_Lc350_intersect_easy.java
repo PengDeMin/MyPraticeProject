@@ -12,7 +12,7 @@ import java.util.*;
  * @Date 2024/5/3 14:40
  */
 
-public class Lc350 {
+public class _5_Lc350_intersect_easy {
     public static void main(String[] args) {
         int[] nums1 = new int[]{1, 2, 2, 2, 1};
         int[] nums2 = new int[]{2, 2, 2, 3};

@@ -13,8 +13,8 @@ public class createThreadMain {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //下面创建线程的写法都是多态的写法
         //创建线程的方式一：继承Thread类
-        Thread extendsThhread = new ExtendsThread("民哥子线程1号");
-        extendsThhread.start();
+        Thread extendsThread = new ExtendsThread("民哥子线程1号");
+        extendsThread.start();
 
         //创建线程方式二.1：实现Runnable方法
         Runnable runnable = new ImplementsRunnable();//创建任务对象

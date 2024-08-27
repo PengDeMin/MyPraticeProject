@@ -1,5 +1,6 @@
 package LeetCode.Lenovo0822;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -31,30 +32,33 @@ public class T1 {
         int endY = startAndEndCoord[3];
 
         //2、根据起点和终点坐标求解对应一元一次方程y=ax+b的a和b参数
-        double a = (endY - startY)/(endX - startX);
-        double b1 = startY - a * startX;
-        double b2 = endY - a * endX;
+        BigDecimal a = new BigDecimal(endY - startY).divide(new BigDecimal(endX - startX));
+        //double a = (endY - startY)/(endX - startX);
+        BigDecimal b = new BigDecimal(startY).subtract(a.multiply(new BigDecimal(startX)));
+//        double b1 = startY - a * startX;
+//        double b2 = endY - a * endX;
 
         //3、遍历各个怪物的坐标，看怪物是否处于y=ax+b的曲线上
-//        for (int i = 0; i < monsterCoord.length; i+=2) {
-//            int monsterX = monsterCoord[i];
-//            int calY = (int) (a * monsterX + b);
-//            //在曲线上则消灭数量+1
-//            if(calY == monsterCoord[i+1]){
-//                destroyNum++;
-//            }
-//        }
-
         for (int i = 0; i < monsterCoord.length; i+=2) {
             int monsterX = monsterCoord[i];
-            int monsterY = monsterCoord[i+1];
-            int calY1 = (int) (a * monsterX + b1);
-            int calY2 = (int) (a * monsterX + b2);
+            BigDecimal calY = a.multiply(new BigDecimal(monsterX)).add(b);
+            //int calY = (int) (a * monsterX + b);
             //在曲线上则消灭数量+1
-            if(monsterY == calY1 || monsterY== calY2){
+            if(calY.equals(monsterCoord[i+1])){
                 destroyNum++;
             }
         }
+
+//        for (int i = 0; i < monsterCoord.length; i+=2) {
+//            int monsterX = monsterCoord[i];
+//            int monsterY = monsterCoord[i+1];
+//            int calY1 = (int) (a * monsterX + b1);
+//            int calY2 = (int) (a * monsterX + b2);
+//            //在曲线上则消灭数量+1
+//            if(monsterY == calY1 || monsterY== calY2){
+//                destroyNum++;
+//            }
+//        }
 
 
         System.out.println(destroyNum);
