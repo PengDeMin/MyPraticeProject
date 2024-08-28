@@ -8,7 +8,7 @@ package LeetCode._4_String;
  * @Date 2024/5/4 17:30
  */
 
-public class Lc344_541 {
+public class _1_Lc344_541_easy {
     public static void main(String[] args) {
         char[] s = new char[]{'h', 'e', 'l', 'l', 'o'};
         //System.out.println(reverseString(s));

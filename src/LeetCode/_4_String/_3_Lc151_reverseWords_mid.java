@@ -1,6 +1,8 @@
 package LeetCode._4_String;
 
 
+import java.util.Arrays;
+
 /**
  * @ClassName Lc151
  * @Description 翻转字符串里的单词（中等）
@@ -8,7 +10,7 @@ package LeetCode._4_String;
  * @Date 2024/5/4 20:09
  */
 
-public class Lc151 {
+public class _3_Lc151_reverseWords_mid {
     public static void main(String[] args) {
         System.out.println(reverseWords2(" 3c      2zPeO dpIMVv2SG    1AM       o       VnUhxK a5YKNyuG     x9    EQ  ruJO       0Dtb8qG91w 1rT3zH F0m n G wU"));
     }
@@ -75,14 +77,16 @@ public class Lc151 {
      * 3.反转各个单词
      */
     public static String reverseWords2(String s) {
-        // System.out.println("ReverseWords.reverseWords2() called with: s = [" + s + "]");
         // 1.去除首尾以及中间多余空格
         StringBuilder sb = removeSpace(s);
         // 2.反转整个字符串
         reverseString(sb, 0, sb.length() - 1);
         // 3.反转各个单词
         reverseEachWord(sb);
-        return sb.toString();
+        //return sb.toString();
+
+        char[] abb = new char[]{'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+        return new String(Arrays.copyOfRange(abb,1,4));
     }
 
     private static StringBuilder removeSpace(String s) {
