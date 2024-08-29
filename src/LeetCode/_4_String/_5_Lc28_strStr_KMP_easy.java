@@ -1,4 +1,4 @@
-package LeetCode._3_Hash;
+package LeetCode._4_String;
 
 /**
  * @ClassName Lc28
@@ -7,7 +7,7 @@ package LeetCode._3_Hash;
  * @Date 2024/5/5 17:22
  */
 
-public class Lc28 {
+public class _5_Lc28_strStr_KMP_easy {
     public static void main(String[] args) {
         String haystack = "sadbutsad";
         String needle = "sad";
@@ -71,7 +71,7 @@ public class Lc28 {
         return -1;
     }
 
-    //重难点就是这个next数组的获取
+    //重难点就是这个next数组的获取,next[i]=下标i之前（包括i）的字符串中，有多大长度的相同前缀后缀。
     private static void getNext(int[] next, String needle) {
         //指向前缀末尾位置，也代表了i及i之前最长公共前后缀的长度
         int j = 0;//代表的是某个位置不匹配时应该返回重新开始匹配的模式串位置
