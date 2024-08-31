@@ -60,5 +60,10 @@ public class test {
         strings.get(1);
         strings.remove(1);
         boolean sas = strings.contains("sas");
+
+        Integer a = new Integer(3);
+        int i = a.parseInt(substring);
+        int b = a;//1.5之后自动拆装箱
+        int i1 = Integer.parseInt("123");
     }
 }

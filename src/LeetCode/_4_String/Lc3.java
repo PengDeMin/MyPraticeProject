@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * @ClassName Lc3
- * @Description 无重复字符的最长子串(中等)
+ * @Description 无重复字符的最长子串(中等),滑动窗口哦套路题
  * @Author 彭德民  给定一个字符串 s ，请你找出其中不含有重复字符的最长子串的长度。
  * @Date 2024/5/2 22:46
  */
@@ -23,6 +23,7 @@ public class Lc3 {
     public static int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> window = new HashMap<>();
         int left = 0, right = 0;
+
         int longestLength = 0;//最长子串长度
 
         while (right < s.length()) {
