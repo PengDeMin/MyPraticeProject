@@ -14,6 +14,11 @@ public class Q1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] numberArray = Arrays.stream(sc.next().split(",")).mapToInt(Integer::parseInt).toArray();
+
+//        String[] str = sc.nextLine().split(",");
+//        int[] array = Arrays.stream(str).mapToInt(Integer::parseInt).toArray();
+//        Arrays.stream(str).mapToDouble(Double::parseDouble).toArray();
+
         int need = 0;
         for (int i = 1; i <  numberArray.length && need < 2; i++){
             if(numberArray[i-1] <= numberArray[i]){
