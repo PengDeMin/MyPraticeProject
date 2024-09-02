@@ -52,7 +52,12 @@ public class _1_Lc131_partition_mid {
                 //回溯
                 path.removeLast();
             }
-            else break;
+            else{
+                //这里用continue而不用break只因为此部分子串不是回文串
+                //不代表在此部分子串的基础上做扩充之后也不再试回文串
+                //比如ef不是回文，但是efe就是回文了
+                continue;
+            }
         }
 
     }
