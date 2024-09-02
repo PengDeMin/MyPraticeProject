@@ -1,4 +1,4 @@
-package LeetCode._7_Backtrack;
+package LeetCode._7_Backtrack.Combine;
 
 import java.util.*;
 

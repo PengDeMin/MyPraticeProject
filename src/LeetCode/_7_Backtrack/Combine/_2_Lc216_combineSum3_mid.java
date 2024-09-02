@@ -1,10 +1,10 @@
-package LeetCode._7_Backtrack;
+package LeetCode._7_Backtrack.Combine;
 import java.util.*;
 /**
  * @ClassName _2_Lc216_combineSum3_mid
  * @Author Demin Peng
  * @Date 2024/8/31 16:12
- * @Description 组合总和3,在1~9里面选出k个数，使得这k个数的和为n
+ * @Description 组合总和III,在1~9里面选出k个数，使得这k个数的和为n，且每种组合中不存在重复的数字。
  */
 
 public class _2_Lc216_combineSum3_mid {

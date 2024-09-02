@@ -1,4 +1,4 @@
-package LeetCode._7_Backtrack;
+package LeetCode._7_Backtrack.Combine;
 
 import java.util.*;
 
@@ -6,7 +6,9 @@ import java.util.*;
  * @ClassName _3_Lc33_combinationSum_mid
  * @Author Demin Peng
  * @Date 2024/8/31 17:09
- * @Description  组合总和
+ * @Description  组合总和，给定一个无重复元素的数组 candidates 和一个目标数 target ，
+ * 找出 candidates 中所有可以使数字和为 target 的组合。
+ * 注意：candidates中的数字可以被重复选取
  */
 
 public class _3_Lc33_combinationSum_mid {
