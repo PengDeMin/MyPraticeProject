@@ -63,19 +63,16 @@ public class hot_2_Lc93_restoreIpAddresses_mid {
             //每次循环是以startIndex为子串开头，来判断子串合法性
             //判断子串是否合法
             if(isValidIP(sb,startIndex,i)){
-                //一段合法了，往下递归看后面的是否合法
+                //这一段合法了，往下递归看后面的是否合法
+                //使用StringBuilder就是为了在这里能方便的insert或者deleteCharAt标点符号，避免了创建新的StringBuilder
                 sb.insert(i+1,'.');//先插如一个标点,如在‘113112’中i=2，则插入‘.’，变成‘113.112’
                 //往后看,由于在i+1位置插入了标点，所以后面要从i+2开始看
                 restoreHepler(sb,i+2,pointNum+1,res);
                 //回溯，撤销刚刚放进去的标点
                 sb.deleteCharAt(i+1);
             }
-            else{
-                break;
-            }
-
+            else break;
         }
-
     }
 
     //判断母串sb从start到end这部分的子串是否合法
@@ -84,7 +81,10 @@ public class hot_2_Lc93_restoreIpAddresses_mid {
     * 2、子串数值大于255，不合法
      */
     static boolean isValidIP(StringBuilder sb, int start, int end){
+        //加这一步是为了避免当整个结果还没符合要求，但遍历已经走到串末尾了
+        //如10102，在1.0.102.的时候，end是7，但start走到了8
         if(start>end) return false;
+
         //子串有多位且首位以0开头，则不合法
         if(sb.charAt(start) == '0' && start!=end) return false;
 
