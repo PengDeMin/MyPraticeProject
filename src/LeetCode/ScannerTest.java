@@ -19,7 +19,6 @@ public class ScannerTest {
 //
 //        double v = scanner.nextDouble();
 //        System.out.println(v);
-
         //scanner输入字符型数组并将字符型数组转成整形数组的两种方法
         String str1 = scanner.nextLine();
         String[] str11 = str1.split(",");
