@@ -27,6 +27,8 @@ public class CreatePool {
         ExecutorService pool = new ThreadPoolExecutor(3, 5, 8, TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(4), Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 
+        ExecutorService polls = new ThreadPoolExecutor(3, 5, 8, TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(4), Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
         /**
          *二、方式二通过Executors工具类创建线程池，
          * 不过其底层本质还是通过ThreadPoolExecutor来创建线程池

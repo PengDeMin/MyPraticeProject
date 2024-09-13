@@ -22,6 +22,7 @@ public class SortTest {
         arrayList.add("b");
         System.out.println("插入顺序："+arrayList);
 
+
         // 1.自然排序
         Collections.sort(arrayList);
         System.out.println("自然排序："+arrayList);
@@ -33,7 +34,16 @@ public class SortTest {
                 return o2.compareTo(o1);
             }
         });
-        System.out.println("定制排序："+arrayList);
+        System.out.println("定制排序方式1："+arrayList);
+        arrayList.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        });
+        System.out.println("定制排序方式2："+arrayList);
+
+        arrayList.sort(Comparator.naturalOrder());
 
         // 3.反转排序
         Collections.reverse(arrayList);
