@@ -1,6 +1,5 @@
 package LeetCode._5_StackAndQueue;
 
-import jdk.nashorn.internal.ir.CallNode;
 
 import java.sql.PreparedStatement;
 import java.util.*;

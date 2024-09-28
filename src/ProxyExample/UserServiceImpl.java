@@ -3,6 +3,7 @@ package ProxyExample;
 /**
  * @ClassName UserServiceImpl
  * @Description 以下每个业务逻辑中都有公共的记录执行时间代码，直接注释掉，通过代理模式去做这种杂活
+ * 实现接口的目标类
  * @Author 彭德民
  * @Date 2024/4/25 17:27
  */

@@ -96,6 +96,7 @@ class Generic2<T extends Number> {
 //2.1泛型接口声明,使用非限定通配符
 interface Generator<T> {
     public T method();
+    public static final int aa = 0;
 }
 
 //2.2泛型接口实现，不指定类型

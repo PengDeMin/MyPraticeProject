@@ -1,6 +1,5 @@
 package LeetCode._3_Hash;
 
-import com.sun.org.apache.xml.internal.serialize.LineSeparator;
 
 import java.util.ArrayList;
 import java.util.List;
